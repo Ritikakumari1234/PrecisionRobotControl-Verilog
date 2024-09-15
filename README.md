@@ -6,6 +6,38 @@ __Overview__
    obstacles and then controls motors based on the detected distance through PWM signals. The 
    system operates with a finite state machine (FSM) that directs the robot's movements—moving 
    forward, turning, or stopping.
+   
+# Project Objectives
+  1. Simulate a hardware-based robot control system using Verilog.
+  2. Detect obstacles using a simulated ultrasonic sensor.
+  3. Control motor behavior (move, stop, turn) based on sensor input using PWM.
+  4. Verify the system through testbenches and waveform analysis using GTKWave.
+
+# Project Design
+The project is broken down into four main components:
+
+   __1. Ultrasonic Sensor Module (Sensor.v)__
+        **Purpose**: Simulates an ultrasonic sensor to measure distance to an obstacle.
+        **How It Works**: The sensor sends out a trigger pulse and waits for an echo to return. 
+                        The time between the trigger and echo signals corresponds to the 
+                               distance.
+        **Usage**: This module is used as the input for the FSM to decide the robot's movement.
+        
+      "I implemented a sensor module to simulate an ultrasonic sensor's behavior, calculating 
+      the time taken for an echo to return after a trigger is sent. This time is translated 
+       into distance, which the robot uses to decide if it should move or stop."
+       
+   __2. Motor Control Module (MotorControl.v)__
+       **Purpose**: Generates PWM signals to control the motors.
+       **How It Works**: The module outputs left_pwm and right_pwm signals to simulate motor 
+                         control. The PWM signal's duty cycle determines motor speed.
+      **Functionality**: The robot can either move forward, turn left, or right based on the 
+                         motor signals.
+          "The motor control module generates PWM signals that simulate motor behavior. By 
+            adjusting the duty cycle, I control the speed and direction of the robot’s wheels."
+
+
+
 
 
 
