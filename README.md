@@ -50,6 +50,28 @@ The motor control module generates PWM signals that simulate motor behavior. By 
          
 The FSM manages the robot’s movement. If the sensor detects an object at a certain distance, it shifts the control logic from moving forward to turning or stopping. This 
 gives the robot an intelligent decision-making process.
+
+#### 4. Top-Level Module (RobotTop.v)
+###### Purpose: 
+This integrates all the modules (Sensor, MotorControl, and RobotControl) and provides the complete robot behavior.
+###### Function: 
+The top-level module connects the sensor to the FSM and the FSM to the motor control, creating the full control system.
+The top-level module brings everything together. It feeds the sensor's data into the FSM, and the FSM controls the motor based on its internal states.
+
+#### How to Run the Project
+###### Compile the Verilog Files: 
+Using Icarus Verilog, compile the testbench and all necessary modules:
+            iverilog -o robot_control ./tb/RobotTop_tb.v ./src/RobotTop.v ./src/Sensor.v 
+            ./src/MotorControl.v ./src/RobotControl.v
+###### Run the Simulation:
+Use vvp to execute the compiled design:
+             vvp robot_control
+###### View the Waveform:
+Open the .vcd file using GTKWave to visualize the signals and analyze the system:
+                     gtkwave ./waveforms/robot_control.vcd
+
+                   
+
        
     
 
