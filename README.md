@@ -1,6 +1,6 @@
-__PrecisionRobotControl-Verilog__
+# PrecisionRobotControl-Verilog
 
-__Overview__
+  # Overview
    This project simulates an autonomous robot control system designed in Verilog, which allows a 
    robot to avoid obstacles using a distance sensor. It uses an ultrasonic sensor module to detect 
    obstacles and then controls motors based on the detected distance through PWM signals. The 
@@ -23,9 +23,9 @@ The project is broken down into four main components:
                                distance.
         **Usage**: This module is used as the input for the FSM to decide the robot's movement.
         
-      "I implemented a sensor module to simulate an ultrasonic sensor's behavior, calculating 
+      I implemented a sensor module to simulate an ultrasonic sensor's behavior, calculating 
       the time taken for an echo to return after a trigger is sent. This time is translated 
-       into distance, which the robot uses to decide if it should move or stop."
+       into distance, which the robot uses to decide if it should move or stop.
        
    __2. Motor Control Module (MotorControl.v)__
        **Purpose**: Generates PWM signals to control the motors.
@@ -33,8 +33,8 @@ The project is broken down into four main components:
                          control. The PWM signal's duty cycle determines motor speed.
       **Functionality**: The robot can either move forward, turn left, or right based on the 
                          motor signals.
-          "The motor control module generates PWM signals that simulate motor behavior. By 
-            adjusting the duty cycle, I control the speed and direction of the robot’s wheels."
+         The motor control module generates PWM signals that simulate motor behavior. By 
+         adjusting the duty cycle, I control the speed and direction of the robot’s wheels.
 
 
 
