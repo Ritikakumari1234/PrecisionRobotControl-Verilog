@@ -23,8 +23,8 @@ The project is broken down into four main components:
                                distance.
         **Usage**: This module is used as the input for the FSM to decide the robot's movement.
         
-      I implemented a sensor module to simulate an ultrasonic sensor's behavior, calculating 
-      the time taken for an echo to return after a trigger is sent. This time is translated 
+        I implemented a sensor module to simulate an ultrasonic sensor's behavior, calculating 
+        the time taken for an echo to return after a trigger is sent. This time is translated 
        into distance, which the robot uses to decide if it should move or stop.
        
    __2. Motor Control Module (MotorControl.v)__
@@ -33,9 +33,11 @@ The project is broken down into four main components:
                          control. The PWM signal's duty cycle determines motor speed.
       **Functionality**: The robot can either move forward, turn left, or right based on the 
                          motor signals.
-         The motor control module generates PWM signals that simulate motor behavior. By 
-         adjusting the duty cycle, I control the speed and direction of the robot’s wheels.
-    __3. Finite State Machine (RobotControl.v)__
+         
+        The motor control module generates PWM signals that simulate motor behavior. By 
+        adjusting the duty cycle, I control the speed and direction of the robot’s wheels.
+         
+  __3. Finite State Machine (RobotControl.v)__
          **Purpose**: The FSM makes decisions on how the robot should behave based on the 
                      distance measured by the sensor.
          **States**:
@@ -43,9 +45,10 @@ The project is broken down into four main components:
                   TURN_LEFT / TURN_RIGHT: Robot turns when an obstacle is detected.
                   STOP: Robot stops if the obstacle is too close.
          **FSM Logic**: The FSM transitions between these states based on the sensor input.
-     The FSM manages the robot’s movement. If the sensor detects an object at a certain 
-     distance, it shifts the control logic from moving forward to turning or stopping. This 
-     gives the robot an intelligent decision-making process.
+         
+       The FSM manages the robot’s movement. If the sensor detects an object at a certain 
+       distance, it shifts the control logic from moving forward to turning or stopping. This 
+       gives the robot an intelligent decision-making process.
     
 
 
