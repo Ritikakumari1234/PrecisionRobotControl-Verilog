@@ -49,6 +49,7 @@ The project is broken down into four main components:
        The FSM manages the robot’s movement. If the sensor detects an object at a certain 
        distance, it shifts the control logic from moving forward to turning or stopping. This 
        gives the robot an intelligent decision-making process.
+       
     
 
 
