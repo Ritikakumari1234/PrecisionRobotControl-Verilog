@@ -59,16 +59,13 @@ The top-level module connects the sensor to the FSM and the FSM to the motor con
 The top-level module brings everything together. It feeds the sensor's data into the FSM, and the FSM controls the motor based on its internal states.
 
 #### How to Run the Project
-###### Compile the Verilog Files: 
-Using Icarus Verilog, compile the testbench and all necessary modules:
-            iverilog -o robot_control ./tb/RobotTop_tb.v ./src/RobotTop.v ./src/Sensor.v 
-            ./src/MotorControl.v ./src/RobotControl.v
-###### Run the Simulation:
-Use vvp to execute the compiled design:
-             vvp robot_control
-###### View the Waveform:
-Open the .vcd file using GTKWave to visualize the signals and analyze the system:
-                     gtkwave ./waveforms/robot_control.vcd
+###### Compile the Verilog Files: Using Icarus Verilog, compile the testbench and all necessary modules:
+              iverilog -o robot_control ./tb/RobotTop_tb.v ./src/RobotTop.v ./src/Sensor.v 
+              ./src/MotorControl.v ./src/RobotControl.v
+###### Run the Simulation:Use vvp to execute the compiled design:
+                         vvp robot_control
+###### View the Waveform:Open the .vcd file using GTKWave to visualize the signals and analyze the system:
+                           gtkwave ./waveforms/robot_control.vcd
 
                    
 
