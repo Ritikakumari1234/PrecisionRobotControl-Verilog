@@ -35,6 +35,18 @@ The project is broken down into four main components:
                          motor signals.
          The motor control module generates PWM signals that simulate motor behavior. By 
          adjusting the duty cycle, I control the speed and direction of the robot’s wheels.
+    __3. Finite State Machine (RobotControl.v)__
+         **Purpose**: The FSM makes decisions on how the robot should behave based on the 
+                     distance measured by the sensor.
+         **States**:
+                  MOVE_FORWARD: Robot moves forward when no obstacles are detected.
+                  TURN_LEFT / TURN_RIGHT: Robot turns when an obstacle is detected.
+                  STOP: Robot stops if the obstacle is too close.
+         **FSM Logic**: The FSM transitions between these states based on the sensor input.
+     The FSM manages the robot’s movement. If the sensor detects an object at a certain 
+     distance, it shifts the control logic from moving forward to turning or stopping. This 
+     gives the robot an intelligent decision-making process.
+    
 
 
 
