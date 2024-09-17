@@ -68,7 +68,24 @@ The top-level module brings everything together. It feeds the sensor's data into
                            gtkwave ./waveforms/robot_control.vcd
 
                    
+#### Simulation & Testbench
+##### Testbench (RobotTop_tb.v)
+###### Purpose: 
+Simulates various obstacle distances by controlling the echo signal and validates that the FSM responds correctly by switching the robot's behavior (move, turn, stop).
+###### Tested Scenarios:
+No obstacle: Robot should move forward.
+Close obstacle: Robot should stop.
+Mid-distance obstacle: Robot should turn.
+Explanation to Interviewer: "The testbench simulates real-world scenarios where obstacles appear at different distances. By controlling the echo signal in the testbench, I validate that the FSM correctly transitions between different states like MOVE_FORWARD, TURN_LEFT, and STOP."
 
+###### Example Waveform
+Here’s an example waveform that shows the behavior of the robot control system:
+
+
+###### Clock Signal: The clk signal is used for timing the whole system.
+###### Trigger and Echo: The trigger signal initiates the sensor's distance measurement, and the echo signal reflects the measured distance.
+###### PWM Signals: The left_pwm and right_pwm signals control the motors, adjusting their behavior based on the distance to the obstacle.
+"In this waveform, you can see the system's response to an obstacle. When the echo signal indicates a close obstacle, the PWM signals change accordingly to either stop the robot or turn it. The FSM effectively transitions states based on these inputs."
        
     
 
