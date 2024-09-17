@@ -76,7 +76,7 @@ Simulates various obstacle distances by controlling the echo signal and validate
 No obstacle: Robot should move forward.
 Close obstacle: Robot should stop.
 Mid-distance obstacle: Robot should turn.
-Explanation to Interviewer: "The testbench simulates real-world scenarios where obstacles appear at different distances. By controlling the echo signal in the testbench, I validate that the FSM correctly transitions between different states like MOVE_FORWARD, TURN_LEFT, and STOP."
+"The testbench simulates real-world scenarios where obstacles appear at different distances. By controlling the echo signal in the testbench, I validate that the FSM correctly transitions between different states like MOVE_FORWARD, TURN_LEFT, and STOP."
 
 ###### Example Waveform
 Here’s an example waveform that shows the behavior of the robot control system:
